@@ -8,7 +8,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="121.0" layoutY="420.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Approve request" />
-      <Label layoutX="101.0" layoutY="29.0" prefHeight="43.0" prefWidth="202.0" text="Inspector Form">
+      <Label layoutX="101.0" layoutY="29.0" prefHeight="43.0" prefWidth="202.0" text="Inspector">
          <font>
             <Font size="29.0" />
          </font>

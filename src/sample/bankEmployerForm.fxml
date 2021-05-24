@@ -9,7 +9,7 @@
    <children>
       <Button layoutX="20.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Get financial report" />
       <Button layoutX="207.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Make the loan" />
-      <Label layoutX="73.0" layoutY="30.0" prefHeight="43.0" prefWidth="269.0" text="Bank Employer Form">
+      <Label layoutX="73.0" layoutY="30.0" prefHeight="43.0" prefWidth="269.0" text="Bank Employer">
          <font>
             <Font size="29.0" />
          </font>
