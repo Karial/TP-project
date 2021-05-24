@@ -14,8 +14,15 @@ public class LoginController {
     }
 
     public void loginUser(String username, String password) throws IOException {
-        if (this.dataAccessor.checkUser(new User(username, password))) {
-            this.clerkForm.showForm();
+        User user = new User(username, password);
+        if (this.dataAccessor.checkUser(user)) {
+            switch (user.role) {
+                case CLERK:
+                    this.clerkForm.showForm();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
