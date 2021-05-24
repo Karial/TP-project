@@ -12,7 +12,7 @@ public class DataAccessor {
         StringTokenizer st;
         BufferedReader TSVFile = new BufferedReader(new FileReader(path));
         String dataRow = TSVFile.readLine();
-        this.users = new java.util.HashSet<User>();
+        this.users = new java.util.HashMap<User, Role>();
 
         while (dataRow != null) {
             st = new StringTokenizer(dataRow, "\t");
@@ -20,15 +20,34 @@ public class DataAccessor {
             while (st.hasMoreElements()) {
                 dataArray.add(st.nextElement().toString());
             }
-            this.users.add(new User(dataArray.get(0), dataArray.get(1)));
+            Role role = Role.REFERENT;
+            switch (dataArray.get(2)) {
+                case "clerk":
+                    role = Role.CLERK;
+                    break;
+                case "referent":
+                    role = Role.REFERENT;
+                    break;
+                case "bank employer":
+                    role = Role.BANK_EMPLOYER;
+                    break;
+                case "inspector":
+                    role = Role.INSPECTOR;
+                    break;
+            }
+            this.users.put(new User(dataArray.get(0), dataArray.get(1)), role);
             dataRow = TSVFile.readLine();
         }
         TSVFile.close();
     }
 
-    public Boolean checkUser(User user) {
-        return this.users.contains(user);
+    boolean checkUser(User user) {
+        if (this.users.get(user) != null) {
+            user.role = this.users.get(user);
+            return true;
+        }
+        return false;
     }
 
-    private java.util.HashSet<User> users;
+    java.util.HashMap<User, Role> users;
 }

@@ -2,6 +2,13 @@ package sample;
 
 import java.util.Objects;
 
+enum Role {
+    CLERK,
+    REFERENT,
+    BANK_EMPLOYER,
+    INSPECTOR
+}
+
 public class User {
     public User(String login, String password) {
         this.login = login;
@@ -22,4 +29,6 @@ public class User {
     }
 
     String login, password;
+    Role role;
+
 }
