@@ -13,5 +13,6 @@
             <Font size="29.0" />
          </font>
       </Label>
+      <Button fx:id="logout" layoutX="212.0" layoutY="417.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="31.0" prefWidth="182.0" text="Logout" />
    </children>
 </Pane>
