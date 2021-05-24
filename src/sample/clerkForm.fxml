@@ -5,15 +5,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="20.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Create credit request" />
-      <Button layoutX="207.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Approve credit request" />
+      <Button layoutX="14.0" layoutY="399.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Create credit request" />
+      <Button layoutX="205.0" layoutY="399.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Approve credit request" />
       <Label layoutX="132.0" layoutY="30.0" prefHeight="39.0" prefWidth="164.0" text="Clerk Form">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
+      <Button fx:id="logout" layoutX="205.0" layoutY="442.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="25.0" prefWidth="182.0" text="Logout" />
    </children>
 </Pane>

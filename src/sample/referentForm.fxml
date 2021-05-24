@@ -7,12 +7,13 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="20.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Get credit report" />
-      <Button layoutX="207.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Inspect request" />
+      <Button layoutX="17.0" layoutY="402.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Get credit report" />
+      <Button layoutX="207.0" layoutY="402.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" text="Inspect request" />
       <Label layoutX="108.0" layoutY="31.0" prefHeight="43.0" prefWidth="198.0" text="Referent Form">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
+      <Button fx:id="logout" layoutX="207.0" layoutY="442.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="25.0" prefWidth="182.0" text="Logout" />
    </children>
 </Pane>
