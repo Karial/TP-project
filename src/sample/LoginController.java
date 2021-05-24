@@ -24,6 +24,9 @@ public class LoginController {
                     break;
             }
         }
+        else {
+            this.loginForm.invalidDataNotification();
+        }
     }
 
     private final LoginForm loginForm;

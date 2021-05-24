@@ -40,7 +40,7 @@ public class DataAccessor {
         }
         TSVFile.close();
     }
-
+    
     boolean checkUser(User user) {
         if (this.users.get(user) != null) {
             user.role = this.users.get(user);
