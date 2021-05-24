@@ -37,9 +37,9 @@ class LoginFormController {
     private final LoginController loginController;
 }
 
-public class LoginForm {
+public class LoginForm extends Form {
     public LoginForm(Stage primaryStage, LoginController loginController) {
-        this.primaryStage = primaryStage;
+        super(primaryStage);
         this.loginController = loginController;
     }
 
@@ -55,6 +55,5 @@ public class LoginForm {
         this.primaryStage.show();
     }
 
-    private final Stage primaryStage;
     private final LoginController loginController;
 }

@@ -10,9 +10,9 @@ import java.net.URL;
 class ClerkFormController {
 }
 
-public class ClerkForm {
+public class ClerkForm extends Form {
     public ClerkForm(Stage primaryStage) {
-        this.primaryStage = primaryStage;
+        super(primaryStage);
     }
 
     public void showForm() throws IOException {
@@ -26,6 +26,4 @@ public class ClerkForm {
         primaryStage.setTitle("Kazakov-Melekh-Svyat");
         primaryStage.show();
     }
-
-    private final Stage primaryStage;
 }
