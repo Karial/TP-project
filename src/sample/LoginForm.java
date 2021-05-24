@@ -4,9 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -53,6 +51,12 @@ public class LoginForm extends Form {
         this.primaryStage.setResizable(false);
         this.primaryStage.setTitle("Kazakov-Melekh-Svyat");
         this.primaryStage.show();
+    }
+
+    public void invalidDataNotification() {
+        Alert alert = new Alert(Alert.AlertType.NONE,
+                "invalid username or password", ButtonType.APPLY);
+        alert.show();
     }
 
     private final LoginController loginController;

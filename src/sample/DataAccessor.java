@@ -26,9 +26,9 @@ public class DataAccessor {
         TSVFile.close();
     }
 
-    Boolean checkUser(User user) {
+    public Boolean checkUser(User user) {
         return this.users.contains(user);
     }
 
-    java.util.HashSet<User> users;
+    private java.util.HashSet<User> users;
 }

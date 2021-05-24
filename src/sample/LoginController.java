@@ -17,6 +17,9 @@ public class LoginController {
         if (this.dataAccessor.checkUser(new User(username, password))) {
             this.clerkForm.showForm();
         }
+        else {
+            this.loginForm.invalidDataNotification();
+        }
     }
 
     private final LoginForm loginForm;
