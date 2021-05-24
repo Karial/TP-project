@@ -14,21 +14,27 @@ class ClerkFormController {
     @FXML
     private Button logout;
 
+    ClerkFormController(LoginController loginController) {
+        this.loginController = loginController;
+    }
+
     @FXML
     void logoutButtonClicked(ActionEvent event) throws IOException {
-
+        this.loginController.exit();
     }
+
+    private final LoginController loginController;
 }
 
 public class ClerkForm extends Form {
-    public ClerkForm(Stage primaryStage) {
-        super(primaryStage);
+    public ClerkForm(Stage primaryStage, LoginController loginController) {
+        super(primaryStage, loginController);
     }
 
     public void showForm() throws IOException {
         URL location = getClass().getResource("clerkForm.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
-        fxmlLoader.setController(new ClerkFormController());
+        fxmlLoader.setController(new ClerkFormController(super.loginController));
         Scene scene = new Scene(fxmlLoader.load());
 
         primaryStage.setScene(scene);

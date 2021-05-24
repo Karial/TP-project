@@ -7,10 +7,10 @@ import java.io.IOException;
 public class LoginController {
     public LoginController(Stage primaryStage) throws IOException {
         this.loginForm = new LoginForm(primaryStage, this);
-        this.clerkForm = new ClerkForm(primaryStage);
-        this.referentForm = new ReferentForm(primaryStage);
-        this.bankEmployerForm = new BankEmployerForm(primaryStage);
-        this.inspectorForm = new InspectorForm(primaryStage);
+        this.clerkForm = new ClerkForm(primaryStage, this);
+        this.referentForm = new ReferentForm(primaryStage, this);
+        this.bankEmployerForm = new BankEmployerForm(primaryStage, this);
+        this.inspectorForm = new InspectorForm(primaryStage, this);
         this.dataAccessor = new DataAccessor("./src/sample/users.tsv");
 
         this.loginForm.showForm();
@@ -38,6 +38,10 @@ public class LoginController {
         } else {
             this.loginForm.invalidDataNotification();
         }
+    }
+
+    public void exit() throws IOException {
+        this.loginForm.showForm();
     }
 
     private final LoginForm loginForm;

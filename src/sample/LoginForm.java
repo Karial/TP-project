@@ -37,7 +37,7 @@ class LoginFormController {
 
 public class LoginForm extends Form {
     public LoginForm(Stage primaryStage, LoginController loginController) {
-        super(primaryStage);
+        super(primaryStage, loginController);
         this.loginController = loginController;
     }
 
@@ -55,7 +55,7 @@ public class LoginForm extends Form {
 
     public void invalidDataNotification() {
         Alert alert = new Alert(Alert.AlertType.NONE,
-                "invalid username or password", ButtonType.APPLY);
+                "Invalid username or password", ButtonType.OK);
         alert.show();
     }
 
